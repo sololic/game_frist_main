@@ -3,7 +3,7 @@ import { Sword, Shield, Heart, Zap, Package, Map, Users, Trophy, Save, ShoppingB
 import io from 'socket.io-client'; // ⬅️ Socket.io 클라이언트 임포트
 
 // 🚨 중요: 서버 주소와 포트 (Node.js 서버가 실행되는 주소)
-const SERVER_URL = 'https://game-ql52-gjtuxelwp-1592s-projects.vercel.app'; 
+const SERVER_URL = 'https://game-production-48c8.up.railway.app'; 
 // const SERVER_URL = 'http://localhost:3456'; 
 const socket = io(SERVER_URL, { autoConnect: false, transports: ['websocket', 'polling'] }); // 연결 객체 생성
 
