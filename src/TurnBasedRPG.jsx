@@ -5,7 +5,11 @@ import io from 'socket.io-client'; // ⬅️ Socket.io 클라이언트 임포트
 // 🚨 중요: 서버 주소와 포트 (Node.js 서버가 실행되는 주소)
 const SERVER_URL = 'https://game-production-48c8.up.railway.app'; 
 // const SERVER_URL = 'http://localhost:3456'; 
-const socket = io(SERVER_URL, { autoConnect: false, transports: ['websocket', 'polling'] }); // 연결 객체 생성
+const socket = io(SERVER_URL, { 
+  autoConnect: false, 
+  transports: ['websocket', 'polling'], 
+  path: '/socket.io/'
+}); // 연결 객체 생성
 
 // 유틸: 난수
 const getRandomInt = (min, max) => {
