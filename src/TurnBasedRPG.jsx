@@ -9,7 +9,9 @@ const SERVER_URL = 'https://game-production-48c8.up.railway.app';
 const socket = io(SERVER_URL, { 
   autoConnect: false, 
   transports: ['websocket', 'polling'], 
-  path: '/socket.io/'
+  path: '/socket.io/',
+  secure: true, 
+  forceNew: true
 }); // 연결 객체 생성
 
 // 유틸: 난수
